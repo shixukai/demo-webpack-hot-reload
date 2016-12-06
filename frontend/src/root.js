@@ -11,7 +11,7 @@ class Root extends React.Component {
 
   render() {
     return (
-      <div>Root</div>
+      <div>2\\31</div>
     )
   }
 }

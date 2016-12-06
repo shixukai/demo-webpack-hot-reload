@@ -26,5 +26,6 @@
       require: true,
       FileReader: true,
       module: true,
+      __dirname: true,
     }
 }
