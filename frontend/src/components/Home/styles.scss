@@ -1,0 +1,9 @@
+@import "frontend/src/Utils/CssUtils/BaseRuls.scss";
+
+.Home {
+  color: red;
+}
+
+.triangle {
+  @include triangle(30px, red, right)
+}

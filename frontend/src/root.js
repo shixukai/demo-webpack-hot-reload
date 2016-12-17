@@ -1,4 +1,6 @@
 import React from 'react';
+import routes from 'frontend/src/routes';
+import { Router, browserHistory } from 'react-router';
 
 class Root extends React.Component {
   static propTypes = {
@@ -11,7 +13,9 @@ class Root extends React.Component {
 
   render() {
     return (
-      <div>2\\31</div>
+      <Router history={browserHistory}>
+        { routes }
+      </Router>
     )
   }
 }

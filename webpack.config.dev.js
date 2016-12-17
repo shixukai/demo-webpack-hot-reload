@@ -37,6 +37,20 @@ module.exports = {
         loader: ["babel-loader"],
         include: path.join(__dirname, 'frontend/src')
       },
+      {
+        test: /\.s?css$/,
+        loaders: [
+          "style-loader",
+          "css-loader?modules&importLoaders=1",
+          "sass-loader",
+        ],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        loader: "style-loader!css-loader"
+      }
     ]
   },
 
