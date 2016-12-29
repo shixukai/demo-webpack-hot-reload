@@ -2,12 +2,11 @@ import React, { PropTypes } from 'react';
 import { BrowserRouter, Match, Miss, Link } from 'react-router';
 import routes from 'frontend/src/routes';
 import styles from './styles.scss';
-console.log('[show-log-routes]', routes());
-
 
 class App extends React.Component {
   static propTypes = {
-    children: PropTypes.any,
+    store: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
   }
 
   constructor(props) {
@@ -19,7 +18,7 @@ class App extends React.Component {
     return (
       <div className={styles.app}>
         <div className={styles.otherThings}>something show in all site</div>
-        {routes()}
+        {routes(this.props.store, this.props.history)}
       </div>
     );
   }

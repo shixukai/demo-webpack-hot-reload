@@ -4,10 +4,8 @@ import Router from 'react-router/BrowserRouter'
 import { Home } from 'frontend/src/components/Home';
 import { TestPanel } from 'frontend/src/containers/TestPanel';
 
-
-
-const routes = () => (
-  <Router>
+const routes = (store, history) => (
+  <Router history={history}>
     <div>
       <Match exactly pattern="/" component={Home}/>
       <Match pattern="/test" component={TestPanel} />
