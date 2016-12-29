@@ -25,6 +25,7 @@ module.exports = {
   devServer: {
     hot: true,
     // activate hot reloading
+    historyApiFallback: true,
     contentBase: resolve(__dirname, "frontend/src"),
     publicPath: "/",
   },
