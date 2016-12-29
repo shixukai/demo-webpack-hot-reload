@@ -1,18 +1,30 @@
 const { resolve } = require('path');
 const path = require('path');
 const webpack = require('webpack');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const DEBUG = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    "frontend/src/index.js",
-  ],
+  entry: {
+    main: [
+      'react-hot-loader/patch',
+      'webpack-dev-server/client?http://localhost:8080',
+      'webpack/hot/only-dev-server',
+      "frontend/src/index.js",
+    ],
+    vendor: [
+      'moment',
+      'immutable',
+      // 'react',
+      // 'react-dom',
+      // 'react-router',
+      // 'redux',
+    ],
+  },
 
   output: {
     path: resolve(__dirname, "frontend/dist"),
-    filename: "bundle.js",
+    filename: '[name].bundle.js',
     publicPath: "/",
   },
 
@@ -23,8 +35,8 @@ module.exports = {
   },
 
   devServer: {
-    hot: true,
     // activate hot reloading
+    hot: true,
     historyApiFallback: true,
     contentBase: resolve(__dirname, "frontend/src"),
     publicPath: "/",
@@ -60,6 +72,15 @@ module.exports = {
     // activates HMR
     new webpack.NamedModulesPlugin(),
     // prints more readable module names in the browser console on HMR updates
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['vendor'] // Specify the common bundle's name.
+    }),
+    new LodashModuleReplacementPlugin({
+      'collections': true,
+      'paths': true
+    }),
   ],
+//   debug: DEBUG ? true : false,
+// devtool: DEBUG ? 'cheap-module-eval-source-map' : 'hidden-source-map'
   devtool: "source-map",
 }

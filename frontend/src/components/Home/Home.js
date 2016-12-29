@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { BrowserRouter } from 'react-router';
 import { connect } from 'react-redux'
 import { HomeActions } from 'frontend/src/actions'
+import moment from 'moment';
 
 @connect(
   (state) => {
@@ -25,6 +26,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.props.test();
+    console.log(moment().format());
   }
 
   render() {
