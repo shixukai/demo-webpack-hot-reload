@@ -1,21 +1,19 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { BrowserRouter } from 'react-router';
 import { App } from 'frontend/src/containers/App';
+import { Provider } from 'react-redux';
 
-class Root extends React.Component {
-  static propTypes = {
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
+const Root = ({ store }) => (
+  <Provider store={store}>
+    <BrowserRouter>
       <App />
-    );
-  }
+    </BrowserRouter>
+  </Provider>
+)
+
+Root.propTypes = {
+  store: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 }
 
 export default Root;
