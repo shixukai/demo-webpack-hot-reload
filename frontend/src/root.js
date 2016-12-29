@@ -1,6 +1,6 @@
 import React from 'react';
-import routes from 'frontend/src/routes';
-import { Router, browserHistory } from 'react-router';
+import { BrowserRouter } from 'react-router';
+import { App } from 'frontend/src/containers/App';
 
 class Root extends React.Component {
   static propTypes = {
@@ -13,10 +13,8 @@ class Root extends React.Component {
 
   render() {
     return (
-      <Router history={browserHistory}>
-        { routes }
-      </Router>
-    )
+      <App />
+    );
   }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from 'frontend/src/root';
-import routes from 'frontend/src/routes';
+import { App } from 'frontend/src/containers/App';
 import { AppContainer } from 'react-hot-loader';
 
 const mountApp = document.getElementById('container');
