@@ -5,6 +5,8 @@ import { Home } from 'frontend/src/components/Home';
 import { TestPanel } from 'frontend/src/containers/TestPanel';
 
 const routes = (store, history) => (
+  // basename config
+  // <Router history={history} basename='/basename'>
   <Router history={history}>
     <div>
       <Match exactly pattern="/" component={Home}/>
