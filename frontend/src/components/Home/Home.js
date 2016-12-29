@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import styles from './styles.scss';
 import { Link } from 'react-router';
+import { BrowserRouter } from 'react-router';
 
 class Home extends React.Component {
   static propTypes = {
@@ -14,7 +15,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className={styles.Home}>Home
-        <Link to='test'>test link</Link>
+        <Link to='/test'>test link</Link>
         <div className={styles.triangle}>
         </div>
       </div>

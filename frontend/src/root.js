@@ -4,16 +4,15 @@ import { App } from 'frontend/src/containers/App';
 import { Provider } from 'react-redux';
 
 const Root = ({ store }) => (
-  <Provider store={store}>
+  // <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>
+  // </Provider>
 )
 
 Root.propTypes = {
-  store: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired
+  // store: PropTypes.object.isRequired,
 }
 
 export default Root;

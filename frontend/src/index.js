@@ -6,20 +6,21 @@ import { AppContainer } from 'react-hot-loader';
 
 const mountApp = document.getElementById('container');
 
-ReactDOM.render((
-  <AppContainer>
-    <Root />
-  </AppContainer>
-), mountApp);
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('container')
+  );
+};
 
+render(Root);
+
+// Hot Module Replacement API
 if (module.hot) {
   module.hot.accept('frontend/src/root', () => {
-    const NextRootContainer = require('frontend/src/root').default;
-
-    ReactDOM.render((
-      <AppContainer>
-        <NextRootContainer />
-      </AppContainer>
-    ), mountApp);
-  })
+    const NewApp = require('frontend/src/root').default
+    render(NewApp)
+  });
 }
