@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.app}>
-        <div className={styles.otherThings}>something show in all site (app component)</div>
+        <div className={styles.otherThings}>this position for something show in all site (app component)</div>
         {routes(this.props.store, this.props.history)}
       </div>
     );

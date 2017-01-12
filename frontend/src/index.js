@@ -19,7 +19,6 @@ ReactDOM.render(
 
 // Hot Module Replacement API
 if (module.hot) {
-  console.log(1111)
   module.hot.accept('frontend/src/root', () => {
     const NewRoot = require('frontend/src/root').default
     ReactDOM.render(
