@@ -11,20 +11,22 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 const mountApp = document.getElementById('container');
 
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component store={store} history={history}/>
-    </AppContainer>, mountApp
-  );
-};
-
-render(Root);
+ReactDOM.render(
+  <AppContainer>
+    <Root store={store} history={history}/>
+  </AppContainer>, mountApp
+);
 
 // Hot Module Replacement API
 if (module.hot) {
+  console.log(1111)
   module.hot.accept('frontend/src/root', () => {
     const NewRoot = require('frontend/src/root').default
-    render(NewRoot)
+    ReactDOM.render(
+         <AppContainer>
+            <NewRoot store={store} history={history}/>
+         </AppContainer>,
+         mountApp
+       );
   });
 }
