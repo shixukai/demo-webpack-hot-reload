@@ -1,8 +1,9 @@
-import React from 'react';
-import { Match, Miss, Link } from 'react-router'
+import React from 'react'
+// import { Match, Miss, Link } from 'react-router'
+import { Match } from 'react-router'
 import Router from 'react-router/BrowserRouter'
-import { Home } from 'frontend/src/components/Home';
-import { TestPanel } from 'frontend/src/containers/TestPanel';
+import { Home } from 'frontend/src/components/Home'
+import { TestPanel } from 'frontend/src/containers/TestPanel'
 
 const routes = (store, history) => (
   // basename config
@@ -13,6 +14,6 @@ const routes = (store, history) => (
       <Match pattern="/test" component={TestPanel} />
     </div>
   </Router>
-);
+)
 
-export default routes;
+export default routes

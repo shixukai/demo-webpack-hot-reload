@@ -1,8 +1,7 @@
-import React, { PropTypes } from 'react';
-import { BrowserRouter } from 'react-router';
-import { App } from 'frontend/src/containers/App';
-import { Provider } from 'react-redux';
-
+import React, { PropTypes } from 'react'
+// import { BrowserRouter } from 'react-router'
+import { App } from 'frontend/src/containers/App'
+import { Provider } from 'react-redux'
 
 const Root = ({ store, history }) => (
   <Provider store={store} >
@@ -17,4 +16,4 @@ Root.propTypes = {
   history: PropTypes.object.isRequired,
 }
 
-export default Root;
+export default Root

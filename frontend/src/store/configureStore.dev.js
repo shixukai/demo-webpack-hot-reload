@@ -7,12 +7,11 @@ import Immutable from 'immutable'
 const composeEnhancers =
   process.env.NODE_ENV !== 'production' &&
   typeof window === 'object' &&
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
     serialize: {
       immutable: Immutable
     }
-  }) : compose;
+  }) : compose
 
 const configureStore = preloadedState => {
   const store = createStore(

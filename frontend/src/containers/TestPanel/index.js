@@ -1,1 +1,1 @@
-export TestPanel from './TestPanel';
+export TestPanel from './TestPanel'

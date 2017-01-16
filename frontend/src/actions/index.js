@@ -1,1 +1,1 @@
-export * as HomeActions from './HomeActions';
+export * as HomeActions from './HomeActions'

@@ -1,7 +1,7 @@
-import constants from 'react-constants';
+import constants from 'react-constants'
 
 export default constants([
-  //home
+  // home
   'TEST_HOME',
   'CONST_TEMP_REQUEST',
   'CONST_TEMP_SUCCESS',

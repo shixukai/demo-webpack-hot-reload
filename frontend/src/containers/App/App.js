@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
-import { BrowserRouter, Match, Miss, Link } from 'react-router';
-import routes from 'frontend/src/routes';
-import styles from './styles.scss';
+import React, { PropTypes } from 'react'
+import { BrowserRouter, Match, Miss, Link } from 'react-router'
+import routes from 'frontend/src/routes'
+import styles from './styles.scss'
 
 class App extends React.Component {
   static propTypes = {
@@ -9,19 +9,19 @@ class App extends React.Component {
     history: PropTypes.object.isRequired,
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
 
-  render() {
+  render () {
     return (
       <div className={styles.app}>
         <div className={styles.otherThings}>this position for something show in all site (app component)</div>
         {routes(this.props.store, this.props.history)}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
