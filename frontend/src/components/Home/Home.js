@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import styles from './styles.scss'
 import { Link } from 'react-router'
-import moment from 'moment'
+// import moment from 'moment'
 
 class Home extends React.Component {
   static propTypes = {
@@ -14,13 +14,13 @@ class Home extends React.Component {
 
   componentDidMount () {
     // custom console
-    Console.log(moment().format())
+    // console.log(moment().format())
   }
 
   render () {
     return (
       <div className={styles.Home}>Home
-        <Link to='/test'>test link</Link>
+        <Link to='/test'>test hot reload</Link>
         <div className={styles.triangle}>
         </div>
       </div>
