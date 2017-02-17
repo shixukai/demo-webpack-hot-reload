@@ -13,7 +13,7 @@ class TestPanel extends React.Component {
   render () {
     return (
       <div className={styles.TestPanel}>
-        TestPanel 111asdfa3434
+        TestPanel
       </div>
     )
   }
