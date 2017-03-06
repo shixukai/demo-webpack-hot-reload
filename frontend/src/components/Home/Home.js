@@ -21,6 +21,9 @@ class Home extends React.Component {
     return (
       <div className={styles.Home}>Home
         <Link to='/test'>test hot reload</Link>
+        <div>
+          <Link to='/weather'>weather</Link>
+        </div>
         <div className={styles.triangle}>
         </div>
       </div>
