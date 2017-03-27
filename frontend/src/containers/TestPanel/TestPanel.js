@@ -13,6 +13,9 @@ class TestPanel extends React.Component {
   render () {
     return (
       <div className={styles.TestPanel}>
+        <span>
+          asdfasdf
+        </span>
         TestPanel
       </div>
     )
