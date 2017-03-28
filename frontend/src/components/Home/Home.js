@@ -24,6 +24,9 @@ class Home extends React.Component {
         <div>
           <Link to='/weather'>weather</Link>
         </div>
+        <div>
+          <Link to='/pixitest'>PixiTest</Link>
+        </div>
         <div className={styles.triangle}>
         </div>
       </div>
