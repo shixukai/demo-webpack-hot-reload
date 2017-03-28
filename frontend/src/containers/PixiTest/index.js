@@ -1,0 +1,1 @@
+export PixiTest from './PixiTest'
